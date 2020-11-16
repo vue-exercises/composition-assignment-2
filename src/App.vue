@@ -35,9 +35,7 @@ export default {
       currentExpenses.value += +enteredExpense.value;
     }
 
-    watch(remainingFunds, function(newValue, oldValue) {
-      console.log('Old funds value: ' + oldValue);
-      console.log('New funds value: ' + newValue);
+    watch(remainingFunds, function(newValue) {
       if (newValue < 0) {
         alert('You are broke!');
       }
